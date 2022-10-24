@@ -86,7 +86,7 @@ button:hover,
 @media (min-width: 35em) {
   main {
     margin: auto;
-    width: min(90%, 65em);
+    width: min(90%, 68em);
     height: 100vh;
     display: flex;
     justify-content: center;
