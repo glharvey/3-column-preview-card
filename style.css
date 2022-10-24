@@ -1,0 +1,112 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+
+  /* Spaces */
+  --space-3xs: clamp(0.25rem, calc(0.23rem + 0.12vw), 0.31rem);
+  --space-2xs: clamp(0.5em, calc(0.45em + 0.24vw), 0.63em);
+  --space-s: clamp(0.94em, calc(0.82em + 0.61vw), 1.25em);
+  --space-m: clamp(1.44em, calc(1.27em + 0.85vw), 1.88em);
+  --space-l: clamp(1.88em, calc(1.63em + 1.22vw), 2.5em);
+  --space-xl: clamp(2.81em, calc(2.45em + 1.83vw), 3.75em);
+  --space-2xl: clamp(3.75em, calc(3.26em + 2.44vw), 5em);
+}
+/* body {
+  height: 100%;
+  font-family: "Lexend Deca", sans-serif;
+} */
+h2 {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: clamp(2.33em, calc(1.75em + 2.89vw), 3.82em);
+  color: var(--very-light-gray);
+  margin-top: var(--space-s);
+  margin-bottom: var(--space-s);
+}
+body {
+  background-color: var(--very-light-gray);
+}
+main {
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--transparent-white);
+  line-height: 150%;
+  padding: var(--space-2xl) var(--space-l);
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+section {
+  padding: var(--space-l);
+}
+button {
+  color: var(--bright-orange);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-s);
+  border: none;
+  border-radius: var(--space-m);
+  padding: var(--space-s) var(--space-xl);
+  font-family: "Lexend Deca", sans-serif;
+  border: 0.02em solid var(--very-light-gray);
+}
+button:hover,
+.suvs button:hover,
+.luxury button:hover {
+  color: var(--very-light-gray);
+  background: none;
+  cursor: pointer;
+}
+.sedans {
+  background-color: var(--bright-orange);
+  border-radius: var(--space-3xs) var(--space-3xs) 0 0;
+}
+.suvs {
+  background-color: var(--dark-cyan);
+}
+.luxury {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 0 var(--space-3xs) var(--space-3xs);
+}
+
+.luxury button {
+  color: var(--very-dark-cyan);
+}
+.suvs button {
+  color: var(--dark-cyan);
+}
+
+@media (min-width: 35em) {
+  main {
+    margin: auto;
+    width: min(90%, 55em);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: min(0.3vw + 0.55em, 1em);
+  }
+  h2 {
+    font-size: clamp(1.35em, calc(1.11em + 1.18vw), 1.95em);
+  }
+  section {
+    height: min(50vw + 20em, 31em);
+  }
+  .sedans {
+    border-radius: var(--space-3xs) 0 0 var(--space-3xs);
+  }
+  .luxury {
+    border-radius: 0 var(--space-3xs) var(--space-3xs) 0;
+  }
+  button {
+    padding: min(0.8vw + 0.05em, 0.7em) calc(min(0.7vw + 0.1em, 1em) * 3);
+    font-size: min(1vw + 0.2em, 1em);
+  }
+}
