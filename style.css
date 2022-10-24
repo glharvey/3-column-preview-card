@@ -86,7 +86,7 @@ button:hover,
 @media (min-width: 35em) {
   main {
     margin: auto;
-    width: min(90%, 68em);
+    width: min(90%, 65em);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -97,7 +97,7 @@ button:hover,
     font-size: clamp(1.35em, calc(1.11em + 1.18vw), 1.95em);
   }
   section {
-    height: min(50vw + 20em, 31em);
+    height: min(50vw + 20em, 30em);
   }
   .sedans {
     border-radius: var(--space-3xs) 0 0 var(--space-3xs);
